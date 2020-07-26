@@ -17,9 +17,6 @@ result = [0, 0, 0]
 
 def check(mat):
 	N = len(mat)
-	cnt_minus = 0
-	cnt_zero = 0
-	cnt_plus = 0
 	global result
 
 	# 나의 색종이가 모두 같은 색인지 확인
