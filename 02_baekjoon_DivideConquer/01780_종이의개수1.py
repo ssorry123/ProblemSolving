@@ -5,6 +5,7 @@ pypy3 정답
 종이의개수 0과 비교하여
 -클래스 형식 버림
 -input() 대신 readline() 사용
+-string -> int 변환 안함
 -check 함수 수정
 
 실행 시간 : 5892ms -> 2212ms
