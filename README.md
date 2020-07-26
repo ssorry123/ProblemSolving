@@ -4,4 +4,4 @@
 
 ### 2015..~2018.. 
 ##### baekjoon with C, C#, Java
-##### No Upload
+##### no upload
