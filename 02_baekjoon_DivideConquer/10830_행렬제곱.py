@@ -23,8 +23,8 @@ class Matrix:
             for j in range(N):
                 tmp = 0
                 for k in range(N):
-                    a = A[i][k] # <1000
-                    b = B[k][j] # <1000
+                    a = A[i][k] # <=1000
+                    b = B[k][j] # <=1000
                     tmp = (tmp + (a*b))%1000
                 ret[i].append((int)(tmp))
         RetMatrix = Matrix(ret)   # 결과 객체 생성 후 객체 반환
