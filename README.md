@@ -1,6 +1,7 @@
 ### ※2020.07..~ baekjoon with python
-##### 01_baekjoon_greedyAlgo
+##### 01_baekjoon_greedyAlgo, clear
 ##### 02_baekjoon_DivideConquer
+##### 03_baekjoon_dynamicprogramming1
 * 시간 초과가 발생할 경우
 ```
 python3 대신 pypy3 으로 돌려보기
