@@ -1,4 +1,5 @@
 ### ※2020.07..~ baekjoon with python
+#### 단계별로 풀어보기
 ##### 01_baekjoon_greedyAlgo, clear
 ##### 02_baekjoon_DivideConquer
 ##### 03_baekjoon_dynamicprogramming1

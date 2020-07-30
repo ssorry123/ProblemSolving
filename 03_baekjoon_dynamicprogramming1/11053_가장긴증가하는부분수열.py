@@ -11,6 +11,7 @@ cache = [-1]*1001
 def LIS(start, S):
     """
     LIS(int start, List S)
+    start부터 S끝까지의 가장긴증가하는 부분수열 길이
     """  
     n = len(S)
 
