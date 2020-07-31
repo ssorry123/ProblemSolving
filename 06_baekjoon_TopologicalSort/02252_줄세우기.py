@@ -3,14 +3,14 @@
 
 read = lambda : input().split()
 
-class Node:
-    def __init__(self, value):
-        self.to_node = list()
-        self.in_node_cnt = 0
-        self.value = value
 
 class Graph:
     nodes = dict()
+    class Node:
+        def __init__(self, value):
+            self.to_node = list()
+            self.in_node_cnt = 0
+            self.value = value
     
     @classmethod
     def add_info(cls, r, c):
@@ -19,13 +19,13 @@ class Graph:
         if r in cls.nodes:
             r_node = cls.nodes.get(r)
         else:
-            r_node = Node(r)
+            r_node = Graph.Node(r)
             cls.nodes[r] = r_node
         
         if c in cls.nodes:
             c_node = cls.nodes.get(c)
         else:
-            c_node = Node(c)
+            c_node = Graph.Node(c)
             cls.nodes[c] = c_node
 
         r_node.to_node.append(c)
