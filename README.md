@@ -1,13 +1,13 @@
-### ※2020.07..~ baekjoon with python
+### ※2020.07..~with python or C(C++)
 ##### BOJ 단계별로 풀어보기
 ###### dd_baekjoon_cccccccccccc
 
 ##### C++ 안쓰지만 C++을 사용해야 할 상황을 위한 작은 정보
 ###### small_cpp_info
 
-### ※2015..~2019,,  2020.07~ 
+### ※2015..~2019
 ##### baekjoon with C, C#, Java
-##### Some have been uploaded with recent Python files
+##### 대부분 업로드 되지 않음.
 
 * BOJ python3 시간 초과가 발생할 경우
 ```
