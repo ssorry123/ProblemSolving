@@ -1,4 +1,4 @@
-### ※2020.07..~with python or C(C++)
+### ※2020.07..~with python3 or C(C++)
 ##### BOJ, 단계별로 풀어보기
 ###### dd_baekjoon_cccccccccccc
 
