@@ -1,5 +1,6 @@
-# boj pypy3 통과
-# python3 시간초과
+# 입력 부분 수정 후 pypy3, python3 모두 통과
+# pypy3 776ms
+# python3 2224ms
 
 import sys
 read = lambda : sys.stdin.readline().strip().split()
@@ -8,8 +9,8 @@ class SgmtTree:
     """n 길이의 arr로 부분트리를 만든다"""
     def __init__(self, n, arr):
         self.sum = [0] * (4*n)  # 부분트리 배열
-        self.n = n
-        self.__make_tree(1, 0, self.n - 1, arr)
+        self.__n = n
+        self.__make_tree(1, 0, self.__n - 1, arr)
         return
     def __make_tree(self, idx, left, right, arr):
         """arr[left, right]의 합을 sum[idx]에(idx노드에) 저장,,, O(N)"""
@@ -27,7 +28,7 @@ class SgmtTree:
     
     def search_tree(self, left, right):
         """부분트리를 이용하여 left~right번째 원소들의 합을 구한다"""
-        return self.__search_tree(1, 0, self.n - 1, left - 1, right - 1)
+        return self.__search_tree(1, 0, self.__n - 1, left - 1, right - 1)
     def __search_tree(self, idx, arr_left, arr_right, left, right):
         """idx노드가 가진 [arr_left, arr_right]구간에서 [left, right]구간의 합을 구한다 O(lgN)"""
         # 구간이 우리가 원하는 구간에 포함될 경우 (교집합이 [arr_left, arr_right]인 경우)
@@ -44,10 +45,10 @@ class SgmtTree:
     
     def update_tree(self, b, c):
         """arr의 b번째 원소를 c로 바꿈"""
-        self.__update_tree(1, 0, self.n - 1, b - 1, c)
+        self.__update_tree(1, 0, self.__n - 1, b - 1, c)
         return
     def __update_tree(self, idx, left, right, b, c):
-        """세그먼트트리의 단말노드를 바꾼 후 위로 갱신해감"""
+        """세그먼트트리의 단말노드를 바꾼 후 위로 갱신해감 O(lgn)"""
         if left == right:
             self.sum[idx] = c
             return
@@ -66,20 +67,20 @@ tmp = read()
 N = (int)(tmp[0])  # 수의 개수
 M = (int)(tmp[1])  # 수의 변경 횟수
 K = (int)(tmp[2])  # 구간의 합을 구하는 횟수
-arr = list()
-for _ in range(N):
-    arr.append((int)(input()))
+arr = [0] * N
+for i in range(N):
+    arr[i] = (int)(read()[0])
 
 # sgmentTree객체 생성
 sgmtTree = SgmtTree(N, arr)
 
 for _ in range(M+K):
-    tmp = [(int)(i) for i in read()]
+    tmp = read()
     # 구간합을 구하는 경우
-    if tmp[0] == 2:
-        print(sgmtTree.search_tree(tmp[1], tmp[2]))
+    if tmp[0] == '2':
+        print(sgmtTree.search_tree((int)(tmp[1]), (int)(tmp[2])))
     # 갱신하는 경우
-    elif tmp[0] == 1:
-        sgmtTree.update_tree(tmp[1], tmp[2])
+    elif tmp[0] == '1':
+        sgmtTree.update_tree((int)(tmp[1]), (int)(tmp[2]))
     else:
         print("입력데이터 오류")
