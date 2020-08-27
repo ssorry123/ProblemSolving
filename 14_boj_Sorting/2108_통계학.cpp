@@ -54,7 +54,7 @@ int main(int argc, char** argv) {
 
 	// cout << "answer" << endl;
 	// 산술평균,, floor를 해줘야함
-    // 오답 이유 -> (int)가 내림이라는 것이 보장되지 않는다
+	// 오답 이유 -> (int)가 내림이라는 것이 보장되지 않는다
 	cout << (int)floor((double)(sum) / N + 0.5) << endl;
 	// 중앙값
 	cout << arr[N / 2] << endl;
