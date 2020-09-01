@@ -14,8 +14,8 @@ int S[NMAX][NMAX];
 bool visited[NMAX];
 int team[NMAX];
 
-// cnt = ¹è¿­¿¡ ¾µ À§Ä¡, Áö±İ±îÁö Â§ ÆÀÀÇ ¼ö;
-// me, Àç±ÍÈ£Ãâ½Ã Á¶ÇÕÀÌ¹Ç·Î Áßº¹ Á¦°Å
+// cnt = ë°°ì—´ì— ì“¸ ìœ„ì¹˜, ì§€ê¸ˆê¹Œì§€ ì§  íŒ€ì˜ ìˆ˜;
+// me, ì¬ê·€í˜¸ì¶œì‹œ ì¡°í•©ì´ë¯€ë¡œ ì¤‘ë³µ ì œê±°
 void dfs(int cnt, int me);
 void check_diff();
 
@@ -57,7 +57,7 @@ void dfs(int cnt, int me) {
 }
 
 void check_diff() {
-	// ´Ù¸¥ ÆÀ Á¤º¸ ÀÔ·Â
+	// ë‹¤ë¥¸ íŒ€ ì •ë³´ ì…ë ¥
 	for (int i = 0, j = Ndiv2; i < N; ++i) {
 		if (visited[i] == false) {
 			team[j++] = i;
@@ -75,6 +75,6 @@ void check_diff() {
 		}
 	}
 
-	// ÃÖ¼Ò°ª °»½Å
+	// ìµœì†Œê°’ ê°±ì‹ 
 	MIN = min(MIN, abs(scoreF-scoreB));
 }

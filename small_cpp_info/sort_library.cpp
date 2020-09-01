@@ -12,10 +12,10 @@ int main() {
 
 	int arr[10] = {34, 123,144, 1, -15, 100, 77, 121, 0, 121};
 	print_array(arr);
-	sort(arr, arr + 10);	// ±âº» Á¤·Ä(¿À¸§Â÷¼ø)
+	sort(arr, arr + 10);	// ê¸°ë³¸ ì •ë ¬(ì˜¤ë¦„ì°¨ìˆœ)
 	print_array(arr);
 
-	sort(arr, arr + 10, greater<int>());	// ³»¸²Â÷¼ø Á¤·Ä
+	sort(arr, arr + 10, greater<int>());	// ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 	print_array(arr);
 
 	vector<int> v;

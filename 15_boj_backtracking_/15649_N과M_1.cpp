@@ -8,8 +8,8 @@ using namespace std;
 int N, M;
 int v[MAX] = {0,};
 bool visited[MAX + 1] = {false,};
-void dfs(int idx);		// idx == »ğÀÔÇÒ ¹è¿­ index, ¾Æ·¡ cnt¿Í °ÅÀÇ °°À½
-void print_v(int cnt);	// cnt == ¹è¿­ vÀÇ Å©±â, idx¿Í °°Áö¸¸ ÀÇ¹Ì ±¸º°
+void dfs(int idx);		// idx == ì‚½ì…í•  ë°°ì—´ index, ì•„ë˜ cntì™€ ê±°ì˜ ê°™ìŒ
+void print_v(int cnt);	// cnt == ë°°ì—´ vì˜ í¬ê¸°, idxì™€ ê°™ì§€ë§Œ ì˜ë¯¸ êµ¬ë³„
 
 int main() {
 	cin >> N >> M;
@@ -19,19 +19,19 @@ int main() {
 	return 0;
 }
 void dfs(int idx) {
-	// ±âÀú»ç·Ê, N±æÀÌÀÇ ¼ö¿­À» ¸¸µç °æ¿ì
+	// ê¸°ì €ì‚¬ë¡€, Nê¸¸ì´ì˜ ìˆ˜ì—´ì„ ë§Œë“  ê²½ìš°
 	if (idx == M) {
 		print_v(idx);
 		return;
 	}
 
 	for (int i = 1; i <= N; ++i) {
-		// ¼±ÅÃÇÏÁö ¾ÊÀº ¼ö¶ó¸é
+		// ì„ íƒí•˜ì§€ ì•Šì€ ìˆ˜ë¼ë©´
 		if (visited[i] == false) {
-			v[idx] = i;			// idx À§Ä¡¿¡ »ğÀÔ
-			visited[i] = true;	// ¼±ÅÃµÈ ¿ø¼Ò´Â ´Ù½Ã ¼±ÅÃ ºÒ°¡´É
+			v[idx] = i;			// idx ìœ„ì¹˜ì— ì‚½ì…
+			visited[i] = true;	// ì„ íƒëœ ì›ì†ŒëŠ” ë‹¤ì‹œ ì„ íƒ ë¶ˆê°€ëŠ¥
 			dfs(idx + 1);
-			visited[i] = false; // Ãâ·ÂµÈ ÈÄ¿¡´Â ´Ù½Ã ¼±ÅÃ °¡´É
+			visited[i] = false; // ì¶œë ¥ëœ í›„ì—ëŠ” ë‹¤ì‹œ ì„ íƒ ê°€ëŠ¥
 		}
 	}
 }

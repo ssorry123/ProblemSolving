@@ -7,7 +7,7 @@ using namespace std;
 
 int N, M;
 int v[MAX] = { 0, };
-void dfs(int idx);		// idx == »ğÀÔÇÒ ¹è¿­ index, ¾Æ·¡ cnt¿Í °ÅÀÇ °°À½
+void dfs(int idx);		// idx == ì‚½ì…í•  ë°°ì—´ index, ì•„ë˜ cntì™€ ê±°ì˜ ê°™ìŒ
 void print_v();
 
 int main() {
@@ -18,14 +18,14 @@ int main() {
 	return 0;
 }
 void dfs(int idx) {
-	// ±âÀú»ç·Ê, N±æÀÌÀÇ ¼ö¿­À» ¸¸µç °æ¿ì
+	// ê¸°ì €ì‚¬ë¡€, Nê¸¸ì´ì˜ ìˆ˜ì—´ì„ ë§Œë“  ê²½ìš°
 	if (idx == M) {
 		print_v();
 		return;
 	}
 
 	for (int i = 1; i <= N; ++i) {
-		v[idx] = i;			// idx À§Ä¡¿¡ »ğÀÔ
+		v[idx] = i;			// idx ìœ„ì¹˜ì— ì‚½ì…
 		dfs(idx + 1);
 	}
 }

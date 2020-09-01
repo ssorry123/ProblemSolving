@@ -16,7 +16,7 @@ void print_sudoku();
 void candi_ints(int r, int c, bool *list);
 
 int main(int argc, char** argv) {
-	// ÀÔ·ÂºÎºÐ
+	// ìž…ë ¥ë¶€ë¶„
 	for (int i = 0; i < SIZE; ++i) {
 		for (int j = 0; j < SIZE; ++j) {
 			int tmp = 0;
@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 		}
 	}
 
-	// ÇÔ¼ö ½ÇÇà
+	// í•¨ìˆ˜ ì‹¤í–‰
 	find_one = false;
 	dfs(0);
 
@@ -38,32 +38,32 @@ int main(int argc, char** argv) {
 void dfs(int cnt) {
 	// cout << "cnt " << cnt << endl;
 
-	// ºóÄ­À» ¸ðµÎ Ã¤¿ü´Ù¸é
+	// ë¹ˆì¹¸ì„ ëª¨ë‘ ì±„ì› ë‹¤ë©´
 	if (cnt == blank.size()) {
 		find_one = true;
 		print_sudoku();
 		return;
 	}
 
-	// ÇöÀç ºóÄ­ÀÇ À§Ä¡ ¼ÒÈ¯
+	// í˜„ìž¬ ë¹ˆì¹¸ì˜ ìœ„ì¹˜ ì†Œí™˜
 	int r = blank[cnt].first;
 	int c = blank[cnt].second;
 
-	// ÇöÀç ºóÄ­¿¡ »ç¿ëÇÒ ¼ö ÀÖ´Â ¼ö ¾÷µ¥ÀÌÆ®
-	// ÀÌ ºÎºÐ¿¡ À§Ä¡ÇÏ¸é ¸Å¹ø i°¡ °¡´ÉÇÑÁö °Ë»çÇÒ ÇÊ¿ä¾ø´Ù
+	// í˜„ìž¬ ë¹ˆì¹¸ì— ì‚¬ìš©í•  ìˆ˜ ìžˆëŠ” ìˆ˜ ì—…ë°ì´íŠ¸
+	// ì´ ë¶€ë¶„ì— ìœ„ì¹˜í•˜ë©´ ë§¤ë²ˆ iê°€ ê°€ëŠ¥í•œì§€ ê²€ì‚¬í•  í•„ìš”ì—†ë‹¤
 	bool list[SIZE + 1] = { false, };
 	candi_ints(r, c, list);
 
 	for (int i = 1; i <= SIZE; ++i) {
-		// Ã¹¹øÂ° Á¤´äÀ» ¹ß°ßÇß´Ù¸é ±×³É Á¾·á
+		// ì²«ë²ˆì§¸ ì •ë‹µì„ ë°œê²¬í–ˆë‹¤ë©´ ê·¸ëƒ¥ ì¢…ë£Œ
 		if (find_one) {
 			return;
 		}
 		 
 		if (list[i]) {
-			sudoku[r][c] = i;	// ¾´´Ù
-			dfs(cnt + 1);		// ´ÙÀ½ ºóÄ­À¸·Î ÀÌµ¿ÇÑ´Ù
-			sudoku[r][c] = 0;	// ¾´ °ÍÀ» Áö¿î´Ù
+			sudoku[r][c] = i;	// ì“´ë‹¤
+			dfs(cnt + 1);		// ë‹¤ìŒ ë¹ˆì¹¸ìœ¼ë¡œ ì´ë™í•œë‹¤
+			sudoku[r][c] = 0;	// ì“´ ê²ƒì„ ì§€ìš´ë‹¤
 		}
 	}
 
@@ -73,18 +73,18 @@ void candi_ints(int r, int c, bool* list) {
 	int sectorCol = ((int)(c / 3)) * 3;
 	// cout << sectorRow << " " << sectorCol << endl;
 
-	// °¡´ÉÇÑ ¼öµéÀÇ ¹è¿­ ÃÊ±âÈ­
-	// index 0 Àº »ç¿ëÇÏÁö ¾ÊÀ½
+	// ê°€ëŠ¥í•œ ìˆ˜ë“¤ì˜ ë°°ì—´ ì´ˆê¸°í™”
+	// index 0 ì€ ì‚¬ìš©í•˜ì§€ ì•ŠìŒ
 	for (int i = 1; i <= SIZE; ++i) {
 		list[i] = true;
 	}
 
 	for (int i = 0; i < SIZE; ++i) {
-		list[sudoku[r][i]] = false;	// row °Ë»ç
-		list[sudoku[i][c]] = false;	// col °Ë»ç
+		list[sudoku[r][i]] = false;	// row ê²€ì‚¬
+		list[sudoku[i][c]] = false;	// col ê²€ì‚¬
 	}
 
-	// 3*3 °Ë»ç
+	// 3*3 ê²€ì‚¬
 	for (int i = sectorRow; i < sectorRow + 3; ++i) {
 		for (int j = sectorCol; j < sectorCol + 3; ++j) {
 			list[sudoku[i][j]] = false;

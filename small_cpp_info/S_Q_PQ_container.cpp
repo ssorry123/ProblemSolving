@@ -7,11 +7,11 @@ using namespace std;
 int main() {
 	stack<int> s1;
 	stack<pair<int, int>> s2;
-	s1.empty();	// ºñ¾ú´ÂÁö È®ÀÎ
-	s1.size(); // »çÀÌÁî ¹İÈ¯
+	s1.empty();	// ë¹„ì—ˆëŠ”ì§€ í™•ì¸
+	s1.size(); // ì‚¬ì´ì¦ˆ ë°˜í™˜
 	s1.push(1);
-	s1.top(); // °¡Àå À§ÀÇ µ¥ÀÌÅÍ ¹İÈ¯
-	s1.pop(); // °¡Àå À§ÀÇ µ¥ÀÌÅÍ »èÁ¦, void
+	s1.top(); // ê°€ì¥ ìœ„ì˜ ë°ì´í„° ë°˜í™˜
+	s1.pop(); // ê°€ì¥ ìœ„ì˜ ë°ì´í„° ì‚­ì œ, void
 
 	s2.push(make_pair(1, 2));
 	cout << s2.top().first<< ' ' << s2.top().second << endl;

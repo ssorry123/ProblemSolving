@@ -6,27 +6,27 @@ using namespace std;
 
 #define MAX 1000000
 int N, M;
-int arr[MAX + 1] = { 0, };	// ¹®Á¦¿¡ ÃÊ±â [0, n]±îÁö N+1°³ÀÇ ¿ø¼Ò°¡ ÀÖ´Ù°í ÇÔ
+int arr[MAX + 1] = { 0, };	// ë¬¸ì œì— ì´ˆê¸° [0, n]ê¹Œì§€ N+1ê°œì˜ ì›ì†Œê°€ ìˆë‹¤ê³  í•¨
 bool ran = true;
 
 int found(int i) {
-	// ÁıÇÕÀÇ ´ëÇ¥ idx(·çÆ®)¸¦ Ã£¾Ò´Ù¸é
+	// ì§‘í•©ì˜ ëŒ€í‘œ idx(ë£¨íŠ¸)ë¥¼ ì°¾ì•˜ë‹¤ë©´
 	if (arr[i] == i) {
 		return i;
 	}
-	// ÃÖÀûÈ­ :: °æ·Î ¾ĞÃà ÃÖÀûÈ­
+	// ìµœì í™” :: ê²½ë¡œ ì••ì¶• ìµœì í™”
 	return arr[i] = found(arr[i]);
 }
 
-// union ¿¹¾à¾î »ç¿ë ºÒ°¡´É
+// union ì˜ˆì•½ì–´ ì‚¬ìš© ë¶ˆê°€ëŠ¥
 void merge(int a, int b) {
 	int a_root = found(a);
 	int b_root = found(b);
-	if ((a == b) || (a_root == b_root)) {	// °°Àº ±×·ìÀÏ °æ¿ì
+	if ((a == b) || (a_root == b_root)) {	// ê°™ì€ ê·¸ë£¹ì¼ ê²½ìš°
 		return;
 	}
 
-	// ¾ß¸Å ÃÖÀûÈ­ :: merge°¡ °è¼ÓµÇ´Â °æ¿ì ÇÑÂÊ ½ò¸² ¹æÁö
+	// ì•¼ë§¤ ìµœì í™” :: mergeê°€ ê³„ì†ë˜ëŠ” ê²½ìš° í•œìª½ ì ë¦¼ ë°©ì§€
 	if (ran)
 		arr[a_root] = b_root;
 	else
@@ -41,13 +41,13 @@ int main(int argc, char** argv) {
 	cin >> N >> M;
 
 	for (int i = 0; i <= N; ++i) {
-		arr[i] = i;	// ÃÊ±â »óÅÂ
+		arr[i] = i;	// ì´ˆê¸° ìƒíƒœ
 	}
 
 
 	for (int i = 0; i < M; ++i) {
 		int a, b, c;
-		scanf("%d %d %d", &a, &b, &c);	// cin -> scanf º¯°æ ÈÄ ½Ã°£ÃÊ°ú ÇØ°á;;
+		scanf("%d %d %d", &a, &b, &c);	// cin -> scanf ë³€ê²½ í›„ ì‹œê°„ì´ˆê³¼ í•´ê²°;;
 		// union
 		if (a == 0) {
 			merge(b, c);
@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
 			else {
 				printf("NO\n");
 			}
-		}// ÀÌ·± ÀÔ·ÂÀº ¾øÀ½
+		}// ì´ëŸ° ì…ë ¥ì€ ì—†ìŒ
 		else {
 			cout << "ERROR" << endl;
 		}

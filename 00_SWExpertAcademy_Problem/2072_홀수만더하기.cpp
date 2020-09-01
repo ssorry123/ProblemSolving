@@ -4,7 +4,7 @@ using namespace std;
 
 #define N 10
 
-// LBS¸¦ ¹ÝÈ¯ÇÑ´Ù
+// LBSë¥¼ ë°˜í™˜í•œë‹¤
 bool get(int *num, int idx = 0) {
 	return ((1 << idx) & *num) != 0;
 }
@@ -30,5 +30,5 @@ int main(int argc, char** argv)
 	}
 
 
-	return 0;//Á¤»óÁ¾·á½Ã ¹Ýµå½Ã 0À» ¸®ÅÏÇØ¾ßÇÕ´Ï´Ù.
+	return 0;//ì •ìƒì¢…ë£Œì‹œ ë°˜ë“œì‹œ 0ì„ ë¦¬í„´í•´ì•¼í•©ë‹ˆë‹¤.
 }
