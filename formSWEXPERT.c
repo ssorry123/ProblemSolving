@@ -1,34 +1,34 @@
-#define _CRT_SECURE_NO_WARNINGS	// visual¿¡¼­ scanf »ç¿ëÇÏ±â À§ÇØ
+#define _CRT_SECURE_NO_WARNINGS	// visualì—ì„œ scanf ì‚¬ìš©í•˜ê¸° ìœ„í•´
 /////////////////////////////////////////////////////////////////////////////////////////////
-// ±âº» Á¦°øÄÚµå´Â ÀÓÀÇ ¼öÁ¤ÇØµµ °ü°è ¾ø½À´Ï´Ù. ´Ü, ÀÔÃâ·Â Æ÷¸Ë ÁÖÀÇ
-// ¾Æ·¡ Ç¥ÁØ ÀÔÃâ·Â ¿¹Á¦ ÇÊ¿ä½Ã Âü°íÇÏ¼¼¿ä.
-// Ç¥ÁØ ÀÔ·Â ¿¹Á¦
+// ê¸°ë³¸ ì œê³µì½”ë“œëŠ” ìž„ì˜ ìˆ˜ì •í•´ë„ ê´€ê³„ ì—†ìŠµë‹ˆë‹¤. ë‹¨, ìž…ì¶œë ¥ í¬ë§· ì£¼ì˜
+// ì•„ëž˜ í‘œì¤€ ìž…ì¶œë ¥ ì˜ˆì œ í•„ìš”ì‹œ ì°¸ê³ í•˜ì„¸ìš”.
+// í‘œì¤€ ìž…ë ¥ ì˜ˆì œ
 // int a;
 // float b, c;
 // double d, e, f;
 // char g;
 // char var[256];
 // long long AB;
-// scanf("%d", &a);                      // int º¯¼ö 1°³ ÀÔ·Â¹Þ´Â ¿¹Á¦
-// scanf("%f %f", &b, &c);               // float º¯¼ö 2°³ ÀÔ·Â¹Þ´Â ¿¹Á¦ 
-// scanf("%lf %lf %lf", &d, &e, &f);     // double º¯¼ö 3°³ ÀÔ·Â¹Þ´Â ¿¹Á¦
-// scanf("%c", &g);                      // char º¯¼ö 1°³ ÀÔ·Â¹Þ´Â ¿¹Á¦
-// scanf("%s", &var);                    // ¹®ÀÚ¿­ 1°³ ÀÔ·Â¹Þ´Â ¿¹Á¦
-// scanf("%lld", &AB);                   // long long º¯¼ö 1°³ ÀÔ·Â¹Þ´Â ¿¹Á¦
+// scanf("%d", &a);                      // int ë³€ìˆ˜ 1ê°œ ìž…ë ¥ë°›ëŠ” ì˜ˆì œ
+// scanf("%f %f", &b, &c);               // float ë³€ìˆ˜ 2ê°œ ìž…ë ¥ë°›ëŠ” ì˜ˆì œ 
+// scanf("%lf %lf %lf", &d, &e, &f);     // double ë³€ìˆ˜ 3ê°œ ìž…ë ¥ë°›ëŠ” ì˜ˆì œ
+// scanf("%c", &g);                      // char ë³€ìˆ˜ 1ê°œ ìž…ë ¥ë°›ëŠ” ì˜ˆì œ
+// scanf("%s", &var);                    // ë¬¸ìžì—´ 1ê°œ ìž…ë ¥ë°›ëŠ” ì˜ˆì œ
+// scanf("%lld", &AB);                   // long long ë³€ìˆ˜ 1ê°œ ìž…ë ¥ë°›ëŠ” ì˜ˆì œ
 /////////////////////////////////////////////////////////////////////////////////////////////
-// Ç¥ÁØ Ãâ·Â ¿¹Á¦
+// í‘œì¤€ ì¶œë ¥ ì˜ˆì œ
 // int a = 0;                            
 // float b = 1.0, c = 2.0;               
 // double d = 3.0, e = 0.0; f = 1.0;
 // char g = 'b';
 // char var[256] = "ABCDEFG";
 // long long AB = 12345678901234567L;
-// printf("%d", a);                      // int º¯¼ö 1°³ Ãâ·ÂÇÏ´Â ¿¹Á¦
-// printf("%f %f", b, c);                // float º¯¼ö 2°³ Ãâ·ÂÇÏ´Â ¿¹Á¦
-// printf("%lf %lf %lf", d, e, f);       // double º¯¼ö 3°³ Ãâ·ÂÇÏ´Â ¿¹Á¦
-// printf("%c", g);                      // char º¯¼ö 1°³ Ãâ·ÂÇÏ´Â ¿¹Á¦
-// printf("%s", var);                    // ¹®ÀÚ¿­ 1°³ Ãâ·ÂÇÏ´Â ¿¹Á¦
-// printf("%lld", AB);                   // long long º¯¼ö 1°³ Ãâ·ÂÇÏ´Â ¿¹Á¦
+// printf("%d", a);                      // int ë³€ìˆ˜ 1ê°œ ì¶œë ¥í•˜ëŠ” ì˜ˆì œ
+// printf("%f %f", b, c);                // float ë³€ìˆ˜ 2ê°œ ì¶œë ¥í•˜ëŠ” ì˜ˆì œ
+// printf("%lf %lf %lf", d, e, f);       // double ë³€ìˆ˜ 3ê°œ ì¶œë ¥í•˜ëŠ” ì˜ˆì œ
+// printf("%c", g);                      // char ë³€ìˆ˜ 1ê°œ ì¶œë ¥í•˜ëŠ” ì˜ˆì œ
+// printf("%s", var);                    // ë¬¸ìžì—´ 1ê°œ ì¶œë ¥í•˜ëŠ” ì˜ˆì œ
+// printf("%lld", AB);                   // long long ë³€ìˆ˜ 1ê°œ ì¶œë ¥í•˜ëŠ” ì˜ˆì œ
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <stdio.h>
@@ -36,33 +36,33 @@ int main(void)
 {
 	int test_case;
 	int T;
-	/* ¾Æ·¡ÀÇ freopen ÇÔ¼ö´Â input.txt ¸¦ read only Çü½ÄÀ¸·Î ¿¬ ÈÄ,
-	¾ÕÀ¸·Î Ç¥ÁØ ÀÔ·Â(Å°º¸µå) ´ë½Å input.txt ÆÄÀÏ·ÎºÎÅÍ ÀÐ¾î¿À°Ú´Ù´Â ÀÇ¹ÌÀÇ ÄÚµåÀÔ´Ï´Ù.
-	¿©·¯ºÐÀÌ ÀÛ¼ºÇÑ ÄÚµå¸¦ Å×½ºÆ® ÇÒ ¶§, ÆíÀÇ¸¦ À§ÇØ¼­ input.txt¿¡ ÀÔ·ÂÀ» ÀúÀåÇÑ ÈÄ,
-	freopen ÇÔ¼ö¸¦ ÀÌ¿ëÇÏ¸é ÀÌÈÄ scanf ¸¦ ¼öÇàÇÒ ¶§ Ç¥ÁØ ÀÔ·Â ´ë½Å ÆÄÀÏ·ÎºÎÅÍ ÀÔ·ÂÀ» ¹Þ¾Æ¿Ã ¼ö ÀÖ½À´Ï´Ù.
-	µû¶ó¼­ Å×½ºÆ®¸¦ ¼öÇàÇÒ ¶§¿¡´Â ¾Æ·¡ ÁÖ¼®À» Áö¿ì°í ÀÌ ÇÔ¼ö¸¦ »ç¿ëÇÏ¼Åµµ ÁÁ½À´Ï´Ù.
-	´Ü, Ã¤Á¡À» À§ÇØ ÄÚµå¸¦ Á¦ÃâÇÏ½Ç ¶§¿¡´Â ¹Ýµå½Ã freopen ÇÔ¼ö¸¦ Áö¿ì°Å³ª ÁÖ¼® Ã³¸® ÇÏ¼Å¾ß ÇÕ´Ï´Ù.
+	/* ì•„ëž˜ì˜ freopen í•¨ìˆ˜ëŠ” input.txt ë¥¼ read only í˜•ì‹ìœ¼ë¡œ ì—° í›„,
+	ì•žìœ¼ë¡œ í‘œì¤€ ìž…ë ¥(í‚¤ë³´ë“œ) ëŒ€ì‹  input.txt íŒŒì¼ë¡œë¶€í„° ì½ì–´ì˜¤ê² ë‹¤ëŠ” ì˜ë¯¸ì˜ ì½”ë“œìž…ë‹ˆë‹¤.
+	ì—¬ëŸ¬ë¶„ì´ ìž‘ì„±í•œ ì½”ë“œë¥¼ í…ŒìŠ¤íŠ¸ í•  ë•Œ, íŽ¸ì˜ë¥¼ ìœ„í•´ì„œ input.txtì— ìž…ë ¥ì„ ì €ìž¥í•œ í›„,
+	freopen í•¨ìˆ˜ë¥¼ ì´ìš©í•˜ë©´ ì´í›„ scanf ë¥¼ ìˆ˜í–‰í•  ë•Œ í‘œì¤€ ìž…ë ¥ ëŒ€ì‹  íŒŒì¼ë¡œë¶€í„° ìž…ë ¥ì„ ë°›ì•„ì˜¬ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+	ë”°ë¼ì„œ í…ŒìŠ¤íŠ¸ë¥¼ ìˆ˜í–‰í•  ë•Œì—ëŠ” ì•„ëž˜ ì£¼ì„ì„ ì§€ìš°ê³  ì´ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì…”ë„ ì¢‹ìŠµë‹ˆë‹¤.
+	ë‹¨, ì±„ì ì„ ìœ„í•´ ì½”ë“œë¥¼ ì œì¶œí•˜ì‹¤ ë•Œì—ëŠ” ë°˜ë“œì‹œ freopen í•¨ìˆ˜ë¥¼ ì§€ìš°ê±°ë‚˜ ì£¼ì„ ì²˜ë¦¬ í•˜ì…”ì•¼ í•©ë‹ˆë‹¤.
 	*/
 	// freopen("input.txt", "r", stdin);
-	/* ¾Æ·¡ ÄÚµå¸¦ ¼öÇàÇÏÁö ¾ÊÀ¸¸é ¿©·¯ºÐÀÇ ÇÁ·Î±×·¥ÀÌ Á¦ÇÑ ½Ã°£ ÃÊ°ú·Î °­Á¦ Á¾·á µÇ¾úÀ» ¶§,
-	Ãâ·ÂÇÑ ³»¿ëÀÌ ½ÇÁ¦ Ç¥ÁØ Ãâ·Â¿¡ ±â·ÏµÇÁö ¾ÊÀ» ¼ö ÀÖ½À´Ï´Ù.
-	µû¶ó¼­ ¾ÈÀüÀ» À§ÇØ ¹Ýµå½Ã setbuf(stdout, NULL); À» ¼öÇàÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.
+	/* ì•„ëž˜ ì½”ë“œë¥¼ ìˆ˜í–‰í•˜ì§€ ì•Šìœ¼ë©´ ì—¬ëŸ¬ë¶„ì˜ í”„ë¡œê·¸ëž¨ì´ ì œí•œ ì‹œê°„ ì´ˆê³¼ë¡œ ê°•ì œ ì¢…ë£Œ ë˜ì—ˆì„ ë•Œ,
+	ì¶œë ¥í•œ ë‚´ìš©ì´ ì‹¤ì œ í‘œì¤€ ì¶œë ¥ì— ê¸°ë¡ë˜ì§€ ì•Šì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+	ë”°ë¼ì„œ ì•ˆì „ì„ ìœ„í•´ ë°˜ë“œì‹œ setbuf(stdout, NULL); ì„ ìˆ˜í–‰í•˜ì‹œê¸° ë°”ëžë‹ˆë‹¤.
 	*/
 	setbuf(stdout, NULL);
 
 	scanf("%d", &T);
 	/*
-	¿©·¯ °³ÀÇ Å×½ºÆ® ÄÉÀÌ½º¸¦ Ã³¸®ÇÏ±â À§ÇÑ ºÎºÐÀÔ´Ï´Ù.
+	ì—¬ëŸ¬ ê°œì˜ í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë¥¼ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ ë¶€ë¶„ìž…ë‹ˆë‹¤.
 	*/
 	for (test_case = 1; test_case <= T; ++test_case)
 	{
 		/////////////////////////////////////////////////////////////////////////////////////////////
 		/*
-		ÀÌ ºÎºÐ¿¡ ¿©·¯ºÐÀÇ ¾Ë°í¸®Áò ±¸ÇöÀÌ µé¾î°©´Ï´Ù.
+		ì´ ë¶€ë¶„ì— ì—¬ëŸ¬ë¶„ì˜ ì•Œê³ ë¦¬ì¦˜ êµ¬í˜„ì´ ë“¤ì–´ê°‘ë‹ˆë‹¤.
 		*/
 		/////////////////////////////////////////////////////////////////////////////////////////////
 
 	}
 	printf("Hello");
-	return 0; //Á¤»óÁ¾·á½Ã ¹Ýµå½Ã 0À» ¸®ÅÏÇØ¾ß ÇÕ´Ï´Ù.
+	return 0; //ì •ìƒì¢…ë£Œì‹œ ë°˜ë“œì‹œ 0ì„ ë¦¬í„´í•´ì•¼ í•©ë‹ˆë‹¤.
 }
