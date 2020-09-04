@@ -49,8 +49,6 @@ main() 또는 함수 내에 매우 큰 배열을 할당할 경우
 ```
 *************************************************************************
 ##### Memo
-###### 2020.09.13 NAVER LINER CodingTest
-###### 2020.09.12 KAKAO BLIND RECRUITMENT 1round
 ###### 2020.09.05 BRANDI 'CodeName B', 2round
 ###### 2020.09.02 Ahnlab CodingTest
 ###### 2020.08.29 BRANDI 'CodeName B', 1round
