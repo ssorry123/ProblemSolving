@@ -16,7 +16,7 @@ void print(vector<Token>& v) {
 // vector에 대한 오른차순 정렬(default min)
 bool token_comp(Token& t1, Token& t2) {
 	if (t1.a != t2.a)
-		// 새로 들어오는(뒤로 가는) t2는 t1보다 커야함
+		// 새로 들어오는(뒤로 가는) t2는 t1보다 클때 뒤로감
 		return t1.a < t2.a;
 	else if (t1.b != t2.b)
 		return t1.b < t2.b;
@@ -27,7 +27,7 @@ bool token_comp(Token& t1, Token& t2) {
 struct pq_comp {
 	bool operator()(Token& t1, Token& t2) {
 		if (t1.a != t2.a)
-			// 새로 들어오는 t2가 우선순위가 높아지려면 t1보다 커야함
+			// 새로 들어오는 t2.a 가 크면 우선순위가 높다 
 			return t1.a < t2.a;
 		else if (t1.b != t2.b)
 			return t1.b < t2.b;
