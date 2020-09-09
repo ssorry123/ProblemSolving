@@ -25,15 +25,6 @@ def solution(words, queries):
         if q[-1] == '?':
             front = False
 
-        # ?가 몇글자인지 확인
-        wildcard_cnt = q.count('?')      
-
-        # 와일드카드를 제거한 문자열 추출
-        q_cut = ''
-        if front:
-            q_cut = q[wildcard_cnt:]
-        else:
-            q_cut = q[:-wildcard_cnt]
 
         ''' 매치되는지 확인 '''
         key = len(q)
@@ -44,15 +35,19 @@ def solution(words, queries):
         
         # 해당 쿼리의 길이에 해당하는 단어가 존재할 경우
         cnt = 0
+        
+        # ?가 몇글자인지 확인
+        wildcard_cnt = q.count('?')
+
+        # 와일드카드부분을 제거한 문자열 추출
         for w in by_len[key]:
-            w_cut = ''
             if front:
-                w_cut = w[wildcard_cnt:]
+                if w[wildcard_cnt:] == q[wildcard_cnt:]:
+                    cnt += 1
             else:
-                w_cut = w[:-wildcard_cnt]
-            
-            if w_cut == q_cut:
-                cnt += 1
+                if w[:-wildcard_cnt] == q[:-wildcard_cnt]:
+                    cnt += 1
+
         answer.append(cnt)
         cache[q] = cnt  # 메모이제이션
 
