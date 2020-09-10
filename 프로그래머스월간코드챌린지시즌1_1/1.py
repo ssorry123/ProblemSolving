@@ -9,7 +9,6 @@ def dfs(start, numbers, cnt = 0,sum = 0, ret = list()):
     for i in range(start, len(numbers)):
         dfs(i+1, numbers, cnt + 1, sum + numbers[i], ret)
     
-
 def solution(numbers):
     answer = []
     ret = dfs(0, numbers, 0, 0, answer)
