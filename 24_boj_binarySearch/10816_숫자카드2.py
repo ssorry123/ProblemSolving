@@ -19,3 +19,4 @@ for i in read().split():
     else:
         print(cache[i], end = ' ')
 
+# 정렬하여 [O(nlogn)] 사용하는 이분탐색 보다는 빠르다..?
