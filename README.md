@@ -50,14 +50,3 @@ import sys
 sys.setrecursionlimit(10**6)    # 깊이 제한 10^6 설정
 ```
 
-*************************************************************************
-##### Memo
-###### 2020.09.13 2020 SW 신입 LINER CodingTest
-###### 2020.09.12 2021 KAKAO BLIND RECRUITMENT
-###### 2020.09.10 프로그래머스 월간 코드 챌린지 시즌1_1
-###### 2020.09.05 BRANDI 'CodeName B', 2round
-###### 2020.09.02 Ahnlab CodingTest
-###### 2020.08.29 BRANDI 'CodeName B', 1round
-###### 2020.08.21 SCPC 1round
-###### 2020.08.01 Toss Next BLIND RECRUITMENT
-*************************************************************************
