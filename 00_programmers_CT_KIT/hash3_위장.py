@@ -19,7 +19,12 @@ def solution(clothes):
 
     # 0번 종류의 옷 경우의 수 => 선택안함, 하나 선택, 두개 선택, ...
     # 1번 종류의 옷 경우의 수 => 선택안함, 하나선택, ...
-    # n번 종류의 옷 경우의 수 => ... ,
+    # n번 종류의 옷 경우의 수 => 선택안함, ... ,
+
+    answer = 1
+    for n in arr:
+        answer = answer*(n+1)
+    answer -= 1 # 모두 선택하지 않은 경우를 뺀다
     
     
     return answer
