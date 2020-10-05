@@ -17,6 +17,7 @@ for _ in range(m):
     a, b, c = map(int, read().split())
 
     # a->b의 버스가 여러개 있으므로 해줘야 함
+    # 가장 빠른 버스만 저장
     if c < d[a][b]:
         d[a][b] = c
 
