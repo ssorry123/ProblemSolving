@@ -20,7 +20,6 @@ for _ in range(N-1):
     
     edge[u].append(v)
     edge[v].append(u)
-    continue
 
 
 ''' 트리 만들기 '''
@@ -62,4 +61,3 @@ countSubtree(root)
 for _ in range(Q):
     query = int(read())
     print(cache[query])
-    continue
