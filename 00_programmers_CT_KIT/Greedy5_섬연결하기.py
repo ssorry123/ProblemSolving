@@ -15,9 +15,16 @@ def find(me, ud):
     return root
 
 def union(u, v, ud):
+    if u==v:
+        return
+    if u>v:
+        tmp = u
+        u = v
+        v= tmp
+    
     a = find(u, ud)
     b = find(v, ud)
-    ud[u] = b
+    ud[a] = b
 
 def solution(n, costs):
     answer = 0
