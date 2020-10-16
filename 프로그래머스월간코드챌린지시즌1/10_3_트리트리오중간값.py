@@ -1,3 +1,5 @@
+''' 대회 당시 26.9 시간초과, 다시풀어보자 ''' 
+
 import queue
 
 cache = dict()
