@@ -4,7 +4,7 @@ test.py
 memo.txt
 
 # no often(공개 불가 코드(공개 비허용 문제))
-NoUpload/*
+NoUpload
 
 # no solve problem
 24_boj_binarySearch/1300*
