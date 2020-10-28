@@ -36,12 +36,42 @@
 ```py
 python3 대신 pypy3 으로 돌려보기
 
-input() 대신 readline() 사용해보기
+input() 대신 sys.stdin.readline().strip() 사용해보기
 항상 readline()을 사용하자
 
 //
 파이썬으로는 풀 수 없는 문제도 있는 것 같다...
 추가 시간이 주어지지 않는 경우.. 문제에 따라 언어를 잘 선택할 것
+```
+```py
+queue의 priorityqueue 대신, heapq 사용하기
+heapq가 더 빠른듯, heapq로 시간초과 해결
+
+''' min priority q '''
+import queue
+pq = queue.PriorityQueue()  # init
+pq.put(3)           # push
+pq.get()            # pop
+pq.put(pq.get())    # top
+# sum
+sum=0
+while not pq.empty():
+    sum += pq.get()
+
+''' min heap q'''
+import heapq
+# init
+hq = [ ... ]    # some list
+heapq.heapify(hq)
+
+heapq.heappush(hq, 3)   # push
+heapq.heappop(hq)       # pop
+hq[0]                   # top
+# sum
+sum=0
+for c in hq:
+    sum += c
+
 ```
 <br>
 
