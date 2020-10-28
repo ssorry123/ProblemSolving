@@ -32,9 +32,9 @@
 
 *************************************************************************
 
-* BOJ python3 시간 초과가 발생할 경우
+* python3 시간 초과가 발생할 경우
 ```py
-python3 대신 pypy3 으로 돌려보기
+python3 대신 pypy3 으로 돌려보기(BOJ)
 
 input() 대신 sys.stdin.readline().strip() 사용해보기
 항상 readline()을 사용하자
@@ -75,20 +75,21 @@ for c in hq:
 ```
 <br>
 
-* BOJ C++ 시간 초과가 발생할 경우
+* C++ 시간 초과가 발생할 경우
 ```cpp
-출력시 cout << endl 을 사용한 경우(fflush)
+출력시 cout << endl 을 사용한 경우(fflush) ->
 cout << endl을 사용하지 말고 cout<<"\n" 을 사용하기
 or printf사용하기
 
-입력시 cin을 사용한 경우
+입력시 cin을 사용한 경우 ->
 or scanf 사용하기 (이것만 바꿔서 통과된 경우 있음..)
 
-또는
+또는 ->
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 cout.tie(NULL);
 
+->
 쓸데없이 함수의 반환 값이 있는 경우 void로 리턴하기
 ```
 <br>
@@ -97,7 +98,7 @@ cout.tie(NULL);
 ```cpp
 main() 또는 함수 내에 매우 큰 배열을 할당할 경우
 지역변수(stack영역)로 할당되어 StackOverflow
-
+->
 전역or정적변수(data영역)로 할당
 ```
 <br>
