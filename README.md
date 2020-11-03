@@ -3,38 +3,21 @@
 <br>
 
 ---
-#### ※2020.07..~with python3 or C(C++)
-<br>
-
-##### ㅁ dd_baekjoon_cccccccccccc
-###### BOJ, 단계별로 풀어보기 or 알고리즘 분류
-###### (2015..~2019)
-###### (boj 단계별로 풀어보기 with C, C#, Java)
-###### (대부분 업로드 되지 않음. 해당 단계 풀이 시 업로드)
-<br>
-
-##### ㅁ programmers
-###### 알고리즘 주관적 분류
-<br>
-
-##### ㅁ programmers_CT_KIT
-###### 프로그래머스 코딩테스트 고득점 KIT
-<br>
-
-##### ㅁ programmers_SQL_KIT
-###### 프로그래머스 SQL 고득점 KIT
-<br>
-
-##### ㅁ 프로그래머스월간코드챌린지시즌1
-###### 프로그래머스월간코드챌린지시즌1
-<br>
-
-##### ㅁ small_cpp_info
-###### C++의 편리한 기능을 사용하기 위한 정보들
-
+#### ※2020..~with python3 or C(C++),, 여러 사이트 문제
+##### *2015~2019 BOJ 코드 : 대부분 업로드 되지 않음. 해당 단계 풀이 시 업로드*
 <br>
 
 *************************************************************************
+### Python reference : https://docs.python.org/ko/3/reference/index.html
+<br>
+
+*************************************************************************
+### ㅁ Solution
+#### Time Limit Exceeded(TLE)
+#### Memory Limit Exceeded(MLE)
+#### Runtime Error(RE)
+
+<br>
 
 * python3 시간 초과가 발생할 경우
 ```py
