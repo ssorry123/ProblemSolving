@@ -20,6 +20,14 @@
 
 <br>
 
+* java 시간 초과가 발생한 경우
+```java
+Scanner, System.out.println 대신
+BufferedReader, BufferedWriter 사용
+```
+
+<br>
+
 * python3 시간 초과가 발생할 경우
 ```py
 python3 대신 pypy3 으로 돌려보기(BOJ)
