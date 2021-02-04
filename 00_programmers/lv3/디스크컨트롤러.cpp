@@ -15,9 +15,10 @@ typedef struct _job {
     int burst_time;
 }job;
 
+// 우선순위큐 정렬
 struct job_comp {
     // cpu 사용량이 적은 작업이 우선순위를 갖는다
-    // cpu 사용량이 같다면 요청 시간이 빨랐던 작업이 우선순위를 같는다.
+    // cpu 사용량이 같다면 요청 시간이 빨랐던 작업이 우선순위를 갖는다.
     bool operator()(job& a, job& b) {
         if (a.burst_time != b.burst_time)
             return a.burst_time > b.burst_time;
@@ -25,9 +26,9 @@ struct job_comp {
             return a.request_time > b.request_time;
     }
 };
-
 priority_queue<job, vector<job>, job_comp> pq;
 
+// 초기 벡터 정렬 용
 bool jobs_comp(vector<int>& a, vector<int>& b) {
     // 요청이 들어온 시간이 빠른 순으로 정렬한다
     if (a[0] != b[0])
