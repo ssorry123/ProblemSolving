@@ -1,4 +1,4 @@
--- 코드를 입력하세요
+-- MYSQL
 -- DATETIME에서 시간만 추출 -> HOUR
 SELECT HOUR(DATETIME) as HOUR, count(DATETIME) as COUNT 
 FROM ANIMAL_OUTS
