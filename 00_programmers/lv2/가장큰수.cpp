@@ -19,7 +19,7 @@ string solution(vector<int> numbers) {
 	sort(numbers.begin(), numbers.end(), comp);
 	// 0이 맨 왼쪽에 오면 안됨
 	int k = 0;
-	while (numbers[k] == 0 && k < numbers.size())
+	while (k < numbers.size() && numbers[k] == 0)
 		++k;
 	// 모든 숫자가 0인 경우
 	if (k == numbers.size())
